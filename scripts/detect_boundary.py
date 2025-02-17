@@ -1,3 +1,7 @@
+#bas ye kam kar raha hai, detect karke crop karke ouputs wale folder me cropped image dal deta hai
+# have to figure out for other 2 detection of safe spot and extraction 
+# the order is first detect boundary -> safe spot detection -> extract safe spot sab ouputs me jayega 
+
 import cv2
 import numpy as np
 import os
