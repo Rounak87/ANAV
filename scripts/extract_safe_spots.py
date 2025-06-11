@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import os
 
-# Get the directory of the current script
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load segmentation map
@@ -14,14 +14,14 @@ if not os.path.exists(segmentation_map_path):
 
 segmentation_map = np.load(segmentation_map_path)
 
-# Load the original cropped image for visualization
+
 cropped_image_path = os.path.join(script_dir, "../outputs/cropped_area.jpg")
 image = cv2.imread(cropped_image_path)
 
-# Define "safe" areas (assuming class 1 represents flat areas)
+
 safe_zone_mask = (segmentation_map == 1).astype("uint8")
 
-# Find contours of safe zones
+
 contours, _ = cv2.findContours(safe_zone_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 safe_spots = []
@@ -31,12 +31,12 @@ for contour in contours:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)  # Mark safe spots in red
         safe_spots.append((x, y, w, h))
 
-# Ensure the output directory exists
+
 output_dir = os.path.join(script_dir, "../outputs")
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-# Save the final processed image
+
 marked_image_path = os.path.join(output_dir, "safe_spots_marked.jpg")
 cv2.imwrite(marked_image_path, image)
 

@@ -1,12 +1,9 @@
-#bas ye kam kar raha hai, detect karke crop karke ouputs wale folder me cropped image dal deta hai
-# have to figure out for other 2 detection of safe spot and extraction 
-# the order is first detect boundary -> safe spot detection -> extract safe spot sab ouputs me jayega 
 
 import cv2
 import numpy as np
 import os
 
-#loading the image here
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 image_path = os.path.join(script_dir, "../images/test_image2.jpg")
 
@@ -19,17 +16,17 @@ if image is None:
     print("Error: Unable to read the image. Check the file format and path.")
     exit()
 
-hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)  # Converting to HSV
+hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV) 
 
-# Define the range for detecting yellow color
+
 lower_yellow = np.array([20, 100, 100])
 upper_yellow = np.array([30, 255, 255])
 mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 
-# findind contours of the yellow boundary
+
 contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-# working on the largest detected contour
+
 if contours:
     largest_contour = max(contours, key=cv2.contourArea)  # Select the biggest detected area
     x, y, w, h = cv2.boundingRect(largest_contour)

@@ -8,7 +8,7 @@ import os
 model = models.segmentation.deeplabv3_resnet101(weights='DEFAULT')
 model.eval()
 
-# Get the directory of the current script
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the cropped image (30x40 feet area)
@@ -20,7 +20,7 @@ if not os.path.exists(image_path):
 
 image = Image.open(image_path).convert("RGB")
 
-# Preprocess image for DeepLabV3
+
 preprocess = transforms.Compose([
     transforms.Resize((513, 513)),  # Resize for model input
     transforms.ToTensor(),

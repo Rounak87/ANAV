@@ -1,0 +1,56 @@
+Parameters by Category:
+
+--- Rate Roll ---
+Rate Roll: P Gain: 0.11999999731779099
+Rate Roll: I Gain: 0.10999999940395355
+Rate Roll: D Gain: 0.004000000189989805
+Rate Roll: IMAX: 0.5
+Rate Roll: FLTE: 0.0
+Rate Roll: FLTD: 23.0
+Rate Roll: FLTT: 23.0
+
+--- Rate Pitch ---
+Rate Pitch: P Gain: 0.11999999731779099
+Rate Pitch: I Gain: 0.10999999940395355
+Rate Pitch: D Gain: 0.004000000189989805
+Rate Pitch: IMAX: 0.5
+Rate Pitch: FLTE: 0.0
+Rate Pitch: FLTD: 23.0
+Rate Pitch: FLTT: 23.0
+
+--- Rate Yaw ---
+Rate Yaw: P Gain: 0.11999999731779099
+Rate Yaw: I Gain: 0.10999999940395355
+Rate Yaw: D Gain: 0.004000000189989805
+Rate Yaw: IMAX: 0.5
+Rate Yaw: FLTE: 0.0
+Rate Yaw: FLTD: 23.0
+Rate Yaw: FLTT: 23.0
+
+--- Throttle Accel ---
+
+--- Throttle Rate ---
+
+--- Altitude Hold ---
+
+--- Waypoint Navigation ---
+Waypoint Navigation: Speed: 100.0
+Waypoint Navigation: Radius: 100.0
+Waypoint Navigation: Speed Up: 250.0
+Waypoint Navigation: Speed Dn: 150.0
+
+--- Stabilize Roll ---
+
+--- Stabilize Pitch ---
+
+--- Stabilize Yaw ---
+
+--- Position XY ---
+
+--- Velocity XY ---
+
+--- Basic Filters ---
+
+--- Static Notch Filter ---
+
+--- Harmonic Notch Filter ---
